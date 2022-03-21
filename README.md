@@ -62,8 +62,11 @@ If you recorded multiple GIFs for all the implemented features, you can add them
 
 ## Interview Recording URL Link
 
-[My 5-minute Interview Recording](your-link-here)
+[My Zoom cloud 5-minute Interview Recording](https://umich.zoom.us/rec/share/vC3KsaecYi2v5rhEiqfTqltmRpeLLncFjH2pa8xI-zqIo-cjm9T2gDbBTuBe46lW.mdQVsFjJ6PzPUChB)
 
+[My Google Drive link for the interview just in case it doesn't work for zoom](https://drive.google.com/drive/folders/1lt3jpvBHGLddVulIMFkW_SOUn8MofXNq?usp=sharing)
+
+[If it doesn't for both then this is a unlisted youtube link](https://youtu.be/RAbDQpCzr3I)
 
 ## License
 
