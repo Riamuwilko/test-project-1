@@ -29,8 +29,8 @@ The following **optional** features are implemented:
 * [1] Computer picks a different pattern each time the game is played
 * [1] Player only loses after 3 mistakes (instead of on the first mistake)
 * [1] Game button appearance change goes beyond color (e.g. add an image)
-* [0] Game button sound is more complex than a single tone (e.g. an audio file, a chord, a sequence of multiple tones)
-* [0] User has a limited amount of time to enter their guess on each turn
+* [1] Game button sound is more complex than a single tone (e.g. an audio file, a chord, a sequence of multiple tones)
+* [1] User has a limited amount of time to enter their guess on each turn
 
 The following **additional** features are implemented:
 
@@ -43,6 +43,7 @@ If you recorded multiple GIFs for all the implemented features, you can add them
 ![](https://cdn.glitch.global/f0c87ae6-c901-4101-b02b-e25c48424f55/lightgame2.gif?v=1647857189888)
 ![](https://cdn.glitch.global/f0c87ae6-c901-4101-b02b-e25c48424f55/lightgame3.gif?v=1647857188238)
 ![](https://cdn.glitch.global/f0c87ae6-c901-4101-b02b-e25c48424f55/lightgame4.gif?v=1647857185801)
+![](https://cdn.glitch.global/f0c87ae6-c901-4101-b02b-e25c48424f55/lightgame5.gif?v=1647915928386)
 
 ## Reflection Questions
 1. If you used any outside resources to help complete your submission (websites, books, people, etc) list them here. 
