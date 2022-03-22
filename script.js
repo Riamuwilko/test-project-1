@@ -22,10 +22,14 @@ function startGame(){
     // swap the Start and Stop buttons
     document.getElementById("startBtn").classList.add("hidden");
     document.getElementById("stopBtn").classList.remove("hidden");
+    timeLeft = 120;
+    timer = setInterval(timerfunction, 1000);
     playClueSequence();
+  
 }
 function stopGame(){
     gamePlaying = false;
+    clearInterval(timer);
     // swap the Start and Stop buttons
     document.getElementById("startBtn").classList.remove("hidden");
     document.getElementById("stopBtn").classList.add("hidden");
@@ -48,8 +52,16 @@ function playClueSequence(){
     delay += cluePauseTime;
   }
   clueHoldTime -= 100
-  cluePauseTime-= 30; //how long to pause in between clues
-  nextClueWaitTime -= 100;
+  
+}
+function timerfunction(){
+  if(timeLeft > -1){
+    document.getElementById("time").innerHTML = "You have " + timeLeft-- + " seconds left";
+  }
+  else{
+    clearInterval(timer);
+    loseGame();
+  }
 }
 
 // Sound Synthesis Functions
@@ -61,9 +73,10 @@ const freqMap = {
   5: 500.2
 }
 function playTone(btn,len){ 
-  o.frequency.value = freqMap[btn]
-  g.gain.setTargetAtTime(volume,context.currentTime + 0.05,0.025)
-  context.resume()
+  //o.frequency.value = freqMap[btn]
+  //g.gain.setTargetAtTime(volume,context.currentTime + 0.05,0.025)
+  //context.resume()
+  document.getElementById("audio" + btn).play();
   tonePlaying = true
   setTimeout(function(){
     stopTone()
@@ -71,10 +84,11 @@ function playTone(btn,len){
 }
 function startTone(btn){
   if(!tonePlaying){
-    context.resume()
+    /*context.resume()
     o.frequency.value = freqMap[btn]
     g.gain.setTargetAtTime(volume,context.currentTime + 0.05,0.025)
-    context.resume()
+    context.resume() */
+    document.getElementById("audio" + btn).pause();
     tonePlaying = true
   }
 }
@@ -84,10 +98,13 @@ function stopTone(){
 }
 
 function lightButton(btn){
-  document.getElementById("button"+btn).classList.add("lit")
+  document.getElementById("button"+btn).classList.add("lit");
+  document.getElementById("image"+btn).classList.remove("hidden");
+  
 }
 function clearButton(btn){
-  document.getElementById("button"+btn).classList.remove("lit")
+  document.getElementById("button"+btn).classList.remove("lit");
+  document.getElementById("image"+btn).classList.add("hidden");
 }
 function loseGame(){
   stopGame();
@@ -128,7 +145,15 @@ function guess(btn){
     }
   }
 }
+//Function to display image when button is pressed
+function showImage(btn) {
+  document.getElementById("image"+btn).classList.remove("hidden");
+}
 
+//Function to hide image when button is released
+function hideImage(btn) {
+  document.getElementById("image"+btn).classList.add("hidden");
+}
 
 
 // Page Initialization
