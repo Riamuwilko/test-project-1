@@ -16,6 +16,7 @@
   <body>
     <h1>Light and Sound Memory Game</h1>
     <p>Welcome to the game! Repeat back the pattern by pressing Buttons</p>
+    <progress id="health" value="30" max="30"> </progress>
     <p id="time">You have 120 seconds left</p>
     <button id="startBtn" onclick="startGame()">
       Start
@@ -27,11 +28,11 @@
     
     <div id="gameButtonArea">
       <button id ="button1" onclick="guess(1)" onmousedown="startTone(1);showImage(1)" onmouseup="stopTone();hideImage(1)"> 
-        <audio id = "audio1" src = "https://cdn.glitch.global/f0c87ae6-c901-4101-b02b-e25c48424f55/roblox-death-sound_1.mp3?v=1647912670131"> </audio>
+        <audio id = "audio1" src = "https://cdn.glitch.global/f0c87ae6-c901-4101-b02b-e25c48424f55/yt5s.com%20-%20Rick%20Roll%20(Cut%20Never%20Gonna%20Give%20You%20Up%20Meme)%20-%20Sound%20Effect%20(128%20kbps).mp3?v=1648055267396"> </audio>
         <img id = "image1" class = "hidden" src ="https://cdn.glitch.global/f0c87ae6-c901-4101-b02b-e25c48424f55/nyan_cat.png?v=1647721574158"> 
       </button>
       <button id ="button2" onclick="guess(2)" onmousedown="startTone(2);showImage(2)" onmouseup="stopTone();hideImage(2)">
-        <audio id = "audio2" src = "https://cdn.glitch.global/f0c87ae6-c901-4101-b02b-e25c48424f55/roblox-death-sound_1.mp3?v=1647912670131"> </audio>
+        <audio id = "audio2" src = "https://cdn.glitch.global/f0c87ae6-c901-4101-b02b-e25c48424f55/yt5s.com%20-%20Rick%20Roll%20(Cut%20Never%20Gonna%20Give%20You%20Up%20Meme)%20-%20Sound%20Effect%20(128%20kbps).mp3?v=1648055267396"> </audio>
         <img id = "image2" class = "hidden" src ="https://cdn.glitch.global/f0c87ae6-c901-4101-b02b-e25c48424f55/602ee9ced3ad27001837f2ac.png?v=1647721897404"> 
       </button>
       <button id ="button3" onclick="guess(3)" onmousedown="startTone(3);showImage(3)" onmouseup="stopTone();hideImage(3)">
@@ -39,7 +40,7 @@
         <img id = "image3" class = "hidden" src ="https://cdn.glitch.global/f0c87ae6-c901-4101-b02b-e25c48424f55/602ee9ced3ad27001837f2ac.png?v=1647721897404">
       </button>
       <button id ="button4" onclick="guess(4)" onmousedown="startTone(4);showImage(4)" onmouseup="stopTone();hideImage(4)">
-        <audio id = "audio4" src = "https://cdn.glitch.global/f0c87ae6-c901-4101-b02b-e25c48424f55/roblox-death-sound_1.mp3?v=1647912670131"> </audio>
+        <audio id = "audio4" src = "https://cdn.glitch.global/f0c87ae6-c901-4101-b02b-e25c48424f55/yt5s.com%20-%20Rick%20Roll%20(Cut%20Never%20Gonna%20Give%20You%20Up%20Meme)%20-%20Sound%20Effect%20(128%20kbps).mp3?v=1648055267396"> </audio>
         <img id = "image4" class = "hidden" src ="https://cdn.glitch.global/f0c87ae6-c901-4101-b02b-e25c48424f55/602ee9ced3ad27001837f2ac.png?v=1647721897404">
       </button>
       <button id ="button5" onclick="guess(5)" onmousedown="startTone(5);showImage(5)" onmouseup="stopTone();hideImage(5)">
