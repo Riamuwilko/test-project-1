@@ -124,6 +124,8 @@ function guess(btn){
     if(guessCounter == progress){
       if(progress == pattern.length - 1){
         //GAME OVER: WIN!
+        let health = document.getElementById("health");
+        health.value = 30;
         winGame();
       }else{
         //Pattern correct. Add next segment
@@ -137,10 +139,13 @@ function guess(btn){
   }else{
     //Guess was incorrect
     //GAME OVER: LOSE!
+    let health = document.getElementById("health")
+    health.value -= 10;
     counter++;
     progress++;
     playClueSequence();
     if(counter==3){
+      health.value = 30;
       loseGame();
     }
   }
